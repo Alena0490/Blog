@@ -1,74 +1,29 @@
-![image](https://github.com/user-attachments/assets/7f8d5058-4d0e-432f-a3a8-4bf1ecee4540)
+# Blog – administrativní rozhraní
 
+![Mockup administrace](admin-mockup.jpg)
 
+Tato React aplikace slouží jako jednoduchý systém pro správu článků s přehlednou administrací. Uživatelé mohou články přidávat, upravovat, archivovat a mazat. Veřejná část zobrazuje publikované články.
 
-# Getting Started with Create React App
+## Funkce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Vícestránkový web pomocí **React Router**
+- **Přihlášení** přes Firebase Auth
+- **Formulář** pro přidávání a úpravu článků
+- Možnost **archivace**, **obnovení** a **trvalého smazání**
+- **Realtime synchronizace** dat přes Firestore
+- **Upload obrázků** do Firebase Storage s průběhem nahrávání
+- Zobrazení data poslední úpravy článku
 
-## Available Scripts
+## Technologie
 
-In the project directory, you can run:
+- React (CRA)
+- React Router DOM
+- Firebase (Auth, Firestore, Storage)
+- CSS Modules
 
-### `npm start`
+## Struktura stránek
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `/` – hlavní stránka
+- `/all-articles` – seznam článků
+- `/one-article/:id` – detail článku
+- `/form` – administrace (vyžaduje přihlášení)
